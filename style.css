@@ -13,14 +13,19 @@ body {
     padding: 0;
     min-height: 100vh;
     font-family: var(--font);
-    background: radial-gradient(ellipse at bottom, var(--bgColor) 0%, var(--bgColor2) 100%);
-    /* background-image: url('https://bit.ly/3nFVqJh'); */
+    background: radial-gradient(ellipse at top, var(--bgColor) 0%, var(--bgColor2) 100%);
     opacity: 0;
-    animation: 1s ease-out var(--delay) 1 transitionAnimation; /* duration/timing-function/delay/iterations/name */
+    animation: 1s ease-out var(--delay) 1 transitionAnimation;
     animation-fill-mode: forwards;
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
+}
+
+.banner{
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
 }
 
 #profilePicture, #profilePicture img {
@@ -33,7 +38,7 @@ body {
     -webkit-tap-highlight-color: transparent;
 }
 
-#userName {
+#userName a {
     color: var(--accentColor);
     font-size: 1rem;
     font-weight: bold;
@@ -42,8 +47,10 @@ body {
     font-family: var(--font);
     width: 100%;
     text-align: center;
-    text-decoration: none;
+    text-decoration: none !important;
+    
 }
+
 
 #links {
     max-width: 675px;
